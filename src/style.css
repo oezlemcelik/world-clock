@@ -39,7 +39,7 @@ select {
 .container {
   background:#dfdff5;
   max-width: 600px;
-  margin: 60px auto;
+  margin: 60px auto 20px auto;
   padding: 30px;
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
   border-radius: 16px;
@@ -52,7 +52,6 @@ select {
   padding: 30px 0;
   border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
 }
-
 
 .city:last-child {
   border: none;
