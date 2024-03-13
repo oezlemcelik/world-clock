@@ -43,8 +43,30 @@ function updateCity(event){
 updateTime();
 setInterval(updateTime, 1000);
 
-
-
-
 let citiesSelectElement = document.querySelector("#city");
 citiesSelectElement.addEventListener("change", updateCity);
+
+
+function backToHome(display) {
+    let backToHomeLink = document.getElementById("back-to-home");
+    if (backToHomeLink) {
+        backToHomeLink.style.display = display ? "block" : "none";
+    }
+}
+
+function checkCitySelected() {
+    let citySelect = document.getElementById("city");
+    let selectedCity = citySelect.value;
+    if (selectedCity !== "") {
+        backToHome(true);
+    } else {
+        backToHome(false);
+    }
+}
+
+let citySelectElement = document.getElementById("city");
+if (citySelectElement) {
+    citySelectElement.addEventListener("change", checkCitySelected);
+}
+checkCitySelected();
+
